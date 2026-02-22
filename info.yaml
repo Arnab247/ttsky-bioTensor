@@ -1,46 +1,54 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
-  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  [cite_start]title:        "32-bit Molecular Dynamics Engine"      # Project title [cite: 213]
+  [cite_start]author:       "Arnab Mandal"                              # Your name [cite: 216]
+  [cite_start]discord:      "ArnabMandal"                      # Your discord username (optional) [cite: 219]
+  description:  "Fixed-point MD engine for 10-atom protein folding." # One line description [cite: 222]
+  [cite_start]language:     "Verilog"                                # HDL language [cite: 223]
+  [cite_start]clock_hz:     10000000                                 # Clock frequency in Hz [cite: 224]
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+  [cite_start]tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2 [cite: 227]
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_example"
+  [cite_start]top_module:  "tt_um_md_engine" # Must match project.v instantiation [cite: 147, 229]
 
   # List your project's source files here.
   # Source files must be in ./src and you must list each source file separately, one per line.
-  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "project.v"
+    - "md_system_top.v"
+    - "angle_force_core.v"
+    - "bonded_force_core.v"
+    - "dihedral_force_core.v"
+    - "non_bonded_pipeline.v"
+    - "atom_regfile.v"
+    - "residue_database.v"
+    - "atom_type_table.v"
+    - "parameter_ram.v"
 
-# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
-# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins. [cite: 238]
+# This section is for the datasheet/website. Use descriptive names.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "data_addr[0]"
+  ui[1]: "data_addr[1]"
+  ui[2]: "data_addr[2]"
+  ui[3]: "data_addr[3]"
+  ui[4]: "data_addr[4]"
+  ui[5]: "data_addr[5]"
+  ui[6]: "cmd_bus[0]"
+  ui[7]: "cmd_bus[1]"
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "progress[0]"
+  uo[1]: "progress[1]"
+  uo[2]: "progress[2]"
+  uo[3]: "progress[3]"
+  uo[4]: "progress[4]"
+  uo[5]: "progress[5]"
+  uo[6]: "progress[6]"
+  uo[7]: "done_flag"
 
   # Bidirectional pins
   uio[0]: ""
