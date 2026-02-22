@@ -1,20 +1,21 @@
 # Tiny Tapeout project information
 project:
-  [cite_start]title:        "32-bit Molecular Dynamics Engine"      # Project title [cite: 213]
-  [cite_start]author:       "Arnab Mandal"                              # Your name [cite: 216]
-  [cite_start]discord:      "ArnabMandal"                      # Your discord username (optional) [cite: 219]
-  description:  "Fixed-point MD engine for 10-atom protein folding." # One line description [cite: 222]
-  [cite_start]language:     "Verilog"                                # HDL language [cite: 223]
-  [cite_start]clock_hz:     10000000                                 # Clock frequency in Hz [cite: 224]
+  title:        "Bio Tensor Molecular Dynamics"      # Project title
+  author:       "Arnab Mandal"      # Your name
+  discord:      "ArnabMandal"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "MD Engine for Atom Interactions"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
-  [cite_start]tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2 [cite: 227]
+  tiles: "16x16"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  [cite_start]top_module:  "tt_um_bioTensor" # Must match project.v instantiation [cite: 147, 229]
+  top_module:  "tt_um_bioTensor"
 
   # List your project's source files here.
   # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "project.v"
     - "md_system_top.v"
@@ -27,8 +28,8 @@ project:
     - "atom_type_table.v"
     - "parameter_ram.v"
 
-# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins. [cite: 238]
-# This section is for the datasheet/website. Use descriptive names.
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
   ui[0]: "data_addr[0]"
