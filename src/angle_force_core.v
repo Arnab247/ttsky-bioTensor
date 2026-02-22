@@ -108,12 +108,12 @@ module angle_force_core (
                     d_theta <= theta0 - a_out;
                     
                     // --- DEBUG LOG: THE HEART OF THE PROBLEM ---
-                    $display("[%0t] [ANGLE_CORE] Target: %f | Actual: %f | Delta: %f | K: %f", 
-                            //  $time, 
-                             $itor(theta0)/65536.0, 
-                             $itor(a_out)/65536.0, 
-                             $itor(theta0 - a_out)/65536.0,
-                             $itor(k_theta)/65536.0);
+                    // $display("[%0t] [ANGLE_CORE] Target: %f | Actual: %f | Delta: %f | K: %f", 
+                    //         //  $time, 
+                    //          $itor(theta0)/65536.0, 
+                    //          $itor(a_out)/65536.0, 
+                    //          $itor(theta0 - a_out)/65536.0,
+                    //          $itor(k_theta)/65536.0);
                              
                     state <= S_CROSS_1;
                 end
