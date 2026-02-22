@@ -1,0 +1,49 @@
+==========================================================
+  MOLECULAR DYNAMICS SoC: ENERGY MINIMIZER TEST
+==========================================================
+
+VCD info: dumpfile md_system.fst opened for output.
+[T=70000] Loading 10-Atom Alanine Fragment into memory...
+[T=280000] Memory Load Complete.
+
+--- INITIAL COORDINATES ---
+Atom 0: X=  0.0000, Y=  0.0000, Z=  0.0000
+Atom 1: X=  0.0000, Y=  1.0000, Z=  0.0000
+Atom 2: X=  1.5000, Y=  0.0000, Z=  0.0000
+Atom 3: X=  3.0000, Y=  0.0000, Z=  0.0000
+Atom 4: X=  4.5000, Y=  0.0000, Z=  0.0000
+Atom 5: X=  6.0000, Y=  0.0000, Z=  0.0000
+Atom 6: X=  7.5000, Y=  0.0000, Z=  0.0000
+Atom 7: X=  9.0000, Y=  0.0000, Z=  0.0000
+Atom 8: X= 10.5000, Y=  0.0000, Z=  0.0000
+Atom 9: X= 12.0000, Y=  0.0000, Z=  0.0000
+
+
+[T=280000] Triggering Hardware Minimizer (5 Iterations)...
+  -> FSM Starting Iteration 0
+[ITER 0] Metric (Sum of Displacement^2): 459.301287
+  -> FSM Starting Iteration 1
+[ITER 1] Metric (Sum of Displacement^2): 0.031753
+  -> FSM Starting Iteration 2
+[ITER 2] Metric (Sum of Displacement^2): 0.014155
+  -> FSM Starting Iteration 3
+[ITER 3] Metric (Sum of Displacement^2): 0.010821
+  -> FSM Starting Iteration 4
+[ITER 4] Metric (Sum of Displacement^2): 0.011537
+
+
+--- FINAL COORDINATES (After 5 Steps) ---
+Atom 0: X=  1.5306, Y=  0.2428, Z=  0.0788
+Atom 1: X=  0.5598, Y=  0.2683, Z= -0.0319
+Atom 2: X=  2.1323, Y=  0.1853, Z=  0.0168
+Atom 3: X=  3.2744, Y=  0.1100, Z=  0.0032
+Atom 4: X=  4.9063, Y= -0.0003, Z= -0.0957
+Atom 5: X=  6.4070, Y= -0.0784, Z= -0.6656
+Atom 6: X=  6.3427, Y= -0.1253, Z=  0.5647
+Atom 7: X=  7.8497, Y= -0.1504, Z=  0.0696
+Atom 8: X= 10.7214, Y= -0.1415, Z= -0.3409
+Atom 9: X= 12.1809, Y=  0.0028, Z=  0.0030
+
+
+==========================================================
+TEST PASSED
