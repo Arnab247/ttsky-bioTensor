@@ -23,6 +23,7 @@ PROJECT_SOURCES = project.v \
                   lennard_jones_core.v \
                   reciprocal_wrapper.v \
                   reciprocal_unit.v \
+                  norm_seed_lut.v \
                   vector_cross_product.v \
                   vector_normalizer.v
 
