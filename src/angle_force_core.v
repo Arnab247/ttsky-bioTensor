@@ -109,7 +109,7 @@ module angle_force_core (
                     
                     // --- DEBUG LOG: THE HEART OF THE PROBLEM ---
                     $display("[%0t] [ANGLE_CORE] Target: %f | Actual: %f | Delta: %f | K: %f", 
-                             $time, 
+                            //  $time, 
                              $itor(theta0)/65536.0, 
                              $itor(a_out)/65536.0, 
                              $itor(theta0 - a_out)/65536.0,
