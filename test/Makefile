@@ -15,7 +15,15 @@ PROJECT_SOURCES = project.v \
                   atom_regfile.v \
                   residue_database.v \
                   atom_type_table.v \
-                  parameter_ram.v
+                  parameter_ram.v \
+                  acos_poly.v \
+                  cordic_atan2.v \
+                  coulombic_core_stream.v \
+                  inv_sqrt_direct.v \
+                  lennard_jones_core.v \
+                  reciprocal_wrapper.v \
+                  vector_cross_product.v \
+                  vector_normalizer.v
 
 ifneq ($(GATES),yes)
 
